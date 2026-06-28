@@ -1,0 +1,8 @@
+services:
+  citygraph-montevideo:
+    build:
+      context: .
+      args:
+        VITE_BASE_PATH: ${VITE_BASE_PATH:-/}
+    ports:
+      - "${PORT:-5176}:80"

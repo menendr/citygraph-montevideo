@@ -1,0 +1,12 @@
+node_modules
+dist
+.git
+.venv
+.ruff_cache
+cache
+.env
+.env.*
+!.env.example
+logs
+*.log
+.DS_Store

@@ -1,0 +1,39 @@
+{
+  "name": "citygraph-montevideo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "check": "npm run lint && npm run build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "graph:setup": "python3 -m venv .venv && . .venv/bin/activate && pip install -r scripts/requirements.txt",
+    "graph:build": ". .venv/bin/activate && python scripts/build_montevideo_graph.py"
+  },
+  "dependencies": {
+    "@deck.gl/core": "^9.3.5",
+    "@deck.gl/extensions": "^9.3.5",
+    "@deck.gl/geo-layers": "^9.3.5",
+    "@deck.gl/layers": "^9.3.5",
+    "@deck.gl/react": "^9.3.5",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.42.0",
+    "lucide-react": "^1.21.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.1",
+    "@types/node": "^24.13.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "oxlint": "^1.69.0",
+    "tailwindcss": "^4.3.1",
+    "typescript": "~6.0.2",
+    "vite": "^8.1.0"
+  }
+}
